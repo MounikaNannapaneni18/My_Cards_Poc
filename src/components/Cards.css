@@ -1,0 +1,40 @@
+.cardStyle {
+  padding: 16px;
+  margin-right: 20px;
+  height: 55vh;
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  min-width: 310px; 
+  flex-shrink: 0; 
+  opacity: 0.5;
+}
+
+.cardStyle.active {
+  opacity: 1;
+}
+  
+.header {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 5px;
+  width: 270px;
+  color: black;
+  font-family: sans-serif;
+}
+  
+.subHeader {
+  font-size: 18px;
+  margin-bottom: 10px;
+  width: 270px;
+  color: black;
+  font-family: sans-serif;
+}
+  
+.content {
+  font-size: 16px;
+  width: 270px;
+  height: 350px;
+  color: black;
+  font-family: sans-serif;
+}
