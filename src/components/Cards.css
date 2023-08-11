@@ -1,17 +1,24 @@
 .cardStyle {
-  padding: 16px;
-  margin-right: 20px;
-  height: 55vh;
-  width: 310px;
-  display: flex;
-  flex-direction: column;
-  min-width: 310px; 
-  flex-shrink: 0; 
-  opacity: 0.5;
+  background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    margin-right: 80px;
+    height: 65vh;
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    min-width: 310px; 
+    flex-shrink: 0; 
+    opacity: 0.5;
 }
 
 .cardStyle.active {
   opacity: 1;
+}
+
+.cardStyle.disabled {
+  background-color: lightgray;
 }
   
 .header {

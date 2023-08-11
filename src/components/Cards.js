@@ -26,14 +26,15 @@ const Cards = ({ card, isActive }) => {
         };
     }, [isEditing]);
 
+    useEffect(() => {
+        if (isEditing && !isActive) {
+          localStorage.setItem(`card_${card.id}`, JSON.stringify(cardContent));
+        }
+      }, [isEditing, isActive, card.id, cardContent]);
+
     const handleOnClick = () => {
         setIsEditing(true)
     }
-
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setCardContent((prevCard) => ({ ...prevCard, [name]: value }));
-    };
 
     useEffect(() => {
         if (isActive && cardRef.current) {
@@ -43,6 +44,11 @@ const Cards = ({ card, isActive }) => {
           });
         }
       }, [isActive]);    
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setCardContent((prevCard) => ({ ...prevCard, [name]: value }));
+    };
 
     return (
         <>
